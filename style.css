@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.welcome {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.profile-section {
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 8px solid #ffffff;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+
+.about-section {
+    margin: 30px 0 50px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
+
+.about-content {
+    line-height: 1.6;
+}
+
+.about-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.about-content p {
+    text-align: justify;
+}
+
+.skills-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.skills-button {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.skills-button:hover {
+    background: #45a049;
+}
+
+.skills-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.skills-content.show {
+    max-height: 2000px;
+    transition: max-height 0.5s ease-in;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.skills-content.show .skills-grid {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card {
+    background: rgba(76, 175, 80, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.projects-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.project-button {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.project-button:hover {
+    background: #45a049;
+}
+
+.projects-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.projects-content.show {
+    max-height: 2000px;
+    transition: max-height 0.5s ease-in;
+}
+
+.project-card {
+    padding: 30px;
+    margin: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.projects-content.show .project-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.project-card h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.6;
+}
+
+.contact-section {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #45a049;
+}
