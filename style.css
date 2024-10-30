@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('./IMAGE/bg.jpg');
+    background-image: url('IMAGE/bg.jpg');
     background-size: cover;
     background-attachment: fixed;
     color: #ffffff;
@@ -71,12 +71,12 @@ h1 {
     text-align: justify;
 }
 
-.skills-section {
+.skills-section, .projects-section {
     text-align: center;
     margin: 50px 0;
 }
 
-.skills-button {
+.skills-button, .project-button {
     background: #4CAF50;
     color: white;
     padding: 15px 30px;
@@ -87,11 +87,11 @@ h1 {
     transition: background 0.3s;
 }
 
-.skills-button:hover {
+.skills-button:hover, .project-button:hover {
     background: #45a049;
 }
 
-.skills-content {
+.skills-content, .projects-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
@@ -100,27 +100,23 @@ h1 {
     border-radius: 15px;
 }
 
-.skills-content.show {
+.skills-content.show, .projects-content.show {
     max-height: 2000px;
     transition: max-height 0.5s ease-in;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 30px;
+.skills-grid, .projects-content .project-card {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
 }
 
-.skills-content.show .skills-grid {
+.skills-content.show .skills-grid, .projects-content.show .project-card {
     opacity: 1;
     transform: translateY(0);
 }
 
-.skill-card {
+.skill-card, .project-card {
     background: rgba(76, 175, 80, 0.9);
     padding: 20px;
     border-radius: 10px;
@@ -128,71 +124,14 @@ h1 {
     transition: transform 0.3s;
 }
 
-.skill-card:hover {
-    transform: translateY(-10px);
-}
-
-.projects-section {
-    margin: 50px 0;
-    text-align: center;
-}
-
-.project-button {
-    background: #4CAF50;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.project-button:hover {
-    background: #45a049;
-}
-
-.projects-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    background: rgba(0, 0, 0, 0.8);
-    margin-top: 20px;
-    border-radius: 15px;
-}
-
-.projects-content.show {
-    max-height: 2000px;
-    transition: max-height 0.5s ease-in;
-}
-
 .project-card {
-    padding: 30px;
     margin: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-.projects-content.show .project-card {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.project-card h3 {
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-.project-card h4 {
     color: #ffffff;
-    margin-bottom: 15px;
 }
 
-.project-card p {
-    line-height: 1.6;
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-10px);
 }
 
 .contact-section {
@@ -222,13 +161,12 @@ input, textarea {
 button {
     padding: 10px 20px;
     background: #4CAF50;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
-    color: white;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 button:hover {
-    background: #4CAF50;
+    background: #45a049;
 }
